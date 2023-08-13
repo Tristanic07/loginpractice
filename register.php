@@ -26,18 +26,22 @@ if ($name == "" || $username == "" || $password == "" || $email == "") {
         $stmt->bind_param('ssss', $name, $username, $hashedPassword, $email);
         $stmt->execute();
         $stmt->close();
+
+
+
+        echo "<script>alert('Created Successfully!!');</script>";
     } catch (Exception $e) {
         $errorMessage = "Registration Failed: " . $e->getMessage();
     }
+
+
+    $name = "";
+    $email = "";
+    $phone = "";
+    $address = "";
 }
 
 
-$name = "";
-$email = "";
-$phone = "";
-$address = "";
-
-$successMessage = "Sucessfully Registered";
 
 
 

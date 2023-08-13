@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $email = $row['email'];
 } else {
     $id = $_POST['id'];
-    $name = ['name'];
+    $name = $_POST['name'];
     $username = $_POST['username'];
     $password = $_POST['password'];
     $email = $_POST['email'];
